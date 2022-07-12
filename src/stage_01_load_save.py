@@ -1,5 +1,5 @@
 # from webbrowser import get
-from src.utils.all_utils import read_yaml,create_dir
+from src.utils.all_utils import read_yaml,create_directory 
 import argparse
 import pandas as pd
 import os
@@ -16,7 +16,7 @@ def get_data(config_path):
     raw_local_file=config['artifacts']['raw_local_file']
 
     raw_local_dir_path=os.path.join(artifacts_dir,raw_local_dir)
-    create_dir(dirs=[raw_local_dir_path])
+    create_directory(dirs=[raw_local_dir_path])
     
     raw_local_file_path=os.path.join(raw_local_dir_path,raw_local_file)
     df.to_csv(raw_local_file_path,sep=',',index=False)
